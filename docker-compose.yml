@@ -1,0 +1,67 @@
+version: '3.3'
+services:
+  database:
+    ports:
+      - '27017:27017'
+    container_name: application-database
+    restart: always
+    logging:
+      options:
+        max-size: 1g
+    image: mongo
+    volumes:
+      - database:/data/db
+    networks:
+      - backend
+  
+  redis:
+    container_name: celery-broker
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+
+  api:
+    ports:
+      - '5000:5000'
+    build: '.'
+    container_name: application-API
+    environment:
+      - APP_ID=<SUACHAVE>
+    links:
+      - database
+    depends_on:
+      - database
+      - redis
+    networks:
+      - backend
+  
+  worker:
+    build: '.'
+    command: celery worker -A worker.celery --loglevel=info --pool=solo
+    container_name: celery-worker
+    depends_on:
+      - api
+      - redis
+    networks:
+      - backend
+
+  beat:
+    build: '.'
+    command: celery beat -A worker.celery -l info
+    container_name: celery-beat
+    depends_on:
+      - api
+      - redis
+    networks:
+      - backend
+  
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  database:
+    driver: local
