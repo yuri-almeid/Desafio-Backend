@@ -196,6 +196,8 @@ Resposta:
 
 Eu já havia trabalhado com programação assíncrona, porém apenas utilizando threads, então foi minha primeira experiência com o Celery, achei essa ferramenta fantástica.
 
+O projeto foi testado em uma maquina windows no WLS Ubuntu e em um WSL Arch linux.
+
 Além disso, agradeço muito a Miio pela oportunidade de primeiro conhece-los e segundo participar desta etapa que me desafiou e me deu uma enorme satisfação de desenvolver.
 
 A semana deste desafio é a semana do meu casamento 😅, então foi uma semana com muitas coisas para fazer e muitas preocupações, porém consegui organizar meu tempo e minhas atividades a fim de entregar o projeto.
