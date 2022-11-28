@@ -82,7 +82,7 @@ Em seguida, rode o compose para subir os sistema:
 docker-compose up --build -d
 ```
 
-Na primeira execução o banco será criado e este processo dura em média 8 minutos, enquanto isso a API não estará disponível. Após o processo de criação do banco a API estará disponível. Este processo ocorre apenas na primeira vez que o banco é criado.
+Na primeira execução o banco será criado e este processo dura em média **8 minutos**, enquanto isso a API não estará disponível. Após o processo de criação do banco a API estará disponível. Este processo ocorre apenas na primeira vez que o banco é criado.
 
 ## Como usar
 
@@ -198,7 +198,7 @@ Eu já havia trabalhado com programação assíncrona, porém apenas utilizando 
 
 Além disso, agradeço muito a Miio pela oportunidade de primeiro conhece-los e segundo participar desta etapa que me desafiou e me deu uma enorme satisfação de desenvolver.
 
-A semana deste desafio é a semana do meu casamento 😅, então foi uma semana com muitas coisas para fazer, porém consegui organizar meu tempo e minhas atividades a fim de entregar o projeto.
+A semana deste desafio é a semana do meu casamento 😅, então foi uma semana com muitas coisas para fazer e muitas preocupações, porém consegui organizar meu tempo e minhas atividades a fim de entregar o projeto.
 
 ## Autor
 
